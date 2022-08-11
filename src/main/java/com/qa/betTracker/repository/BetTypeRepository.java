@@ -11,7 +11,7 @@ public interface BetTypeRepository extends JpaRepository<BetType, Long> {
 
 	BetType findBySport(String sport);
 
-	@Query(value = "SELECT * from BetType WHERE sport = ?1 Limit 1", nativeQuery = true)
+	@Query(value = "SELECT * from BET_TYPE WHERE sport = ?1 Limit 1", nativeQuery = true)
 	BetType findBetTypeBySport(String sport);
 
 }
