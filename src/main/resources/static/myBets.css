@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: #6fb3be;
+    font-family: "Montserrat", sans-serif;
+
+}
+
+li, a, button {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 10%;
+}
+
+.logo {
+    cursor: pointer;
+    font-size: 36px;
+    color: white;
+}
+
+.nav__links {
+    list-style: none;
+}
+
+.nav__links li {
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+h2{
+    padding: 20px;
+    color: white;
+}
+
+button {
+    padding: 9px 25px;
+    background-color: rgba(0, 136, 169, 1);
+    border:none;
+    border-radius: 50px;
+    cursor: pointer;
+   }
+ 
+   .form-container input[type=text]:focus, .form-container select:focus{
+    background-color:  rgb(202, 223, 228);
+    outline: none;
+
+      }
+    
+
+
+ .btn{
+  background-color: rgb(255, 255, 255);
+  color: black;
+  border: 2px solid #1dd1cb;
+  border-radius: 2px;
+  padding: 6px;
+  cursor: pointer;
+
+ } 
+
+form{
+    color: black; 
+    font-size: 15px;
+    font-weight: 20px;   
+}
+
+table{
+    width: 80%;
+    padding: 2px;
+    margin-top: 2%;
+    color: black;
+    background-color: white;
+}

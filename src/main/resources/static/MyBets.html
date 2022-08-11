@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bet Tracker</title>
+    <link rel="stylesheet" href="myBets.css">
+</head>
+<body>
+    <header>
+        <h1 class="logo" >YBT</h1>
+        <nav>
+            <ul class="nav__links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">My Bets</a></li>
+            </ul>
+        </nav>
+        <a class="Users" href="#"><button>Login</button></a>
+    </header>
+    <main>
+            <div id="addBetForm" class="form">
+            <form  class="form-container">
+                <h2>Please add a new bet below:</h2>
+                <label for="Description"><b>Type of bet</b></label>
+                <input type="text" id="name" placeholder="E.g. Acca" name="betType" required>
+                <label for="Stake"><b>Stake</b></label>
+                <input type="text" id="stake" placeholder="E.g. 5.00" name="stake" required>
+                <label for="Odds"><b>Odds(Decimal)</b></label>
+                <input type="text" id="odds" placeholder="E.g. 11.0" name="odds" required>
+                <label for="Outcome"><b>Result</b></label>
+                <input type="text" id="outcome" placeholder="E.g. WIN" name="result" required>
+                <label for="ProfitLoss"><b>Net Profit</b></label>
+                <input type="text" id="profitLoss" placeholder="E.g. 55.00" name="profitLoss" required>
+                <label for="sports">Choose a sport:</label>
+                <select id="sports" name="sports">
+                  <option value="football">Football</option>
+                  <option value="horseRacing">HorseRacing</option>
+                  <option value="golf">Golf</option>
+                  <option value="tennis">Tennis</option>
+                </select>
+                <button type="submit" class="btn" onclick="create()">Add Bet</button>
+            </form>
+            <table id="MyBets-table" class="table">
+                <thead id="MyBets-table-head">
+                    <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">Type Of Bet</th>
+                        <th scope="col">Stake</th>
+                        <th scope="col">Odds</th>
+                        <th scope="col">Result</th>
+                        <th scope="col">Net Profit</th>
+                        <th scope="col">Date Placed</th>
+                        <th scope="col">Sport</th>
+                    </tr>
+                </thead>
+                <tbody id="mylist-table-body">
+                
+                </tbody>
+            </table>
+
+    </main>
+</body>
+</html>

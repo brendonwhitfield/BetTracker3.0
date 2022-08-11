@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bet Tracker</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <header>
+        <h1 class="logo" >YBT</h1>
+        <nav>
+            <ul class="nav__links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">My Bets</a></li>
+            </ul>
+        </nav>
+        <a class="Users" href="#"><button>Login</button></a>
+    </header>
+    <main>
+        <div id="addBetForm" class="form">
+        <form  class="form-container">
+            <h2>Please Create & Edit Users Below:</h2>
+            <label for="FirstName"><b>First Name</b></label>
+            <input type="text" id="firstName" placeholder="E.g. John" name="firstName" required>
+            <label for="LastName"><b>Last Name</b></label>
+            <input type="text" id="lastName" placeholder="E.g. Williams" name="lastName" required>
+            <label for="Email"><b>Email</b></label>
+            <input type="text" id="email" placeholder="E.g. johnW@yahoo.com" name="email" required>
+            <label for="Address"><b>Address</b></label>
+            <input type="text" id="address" placeholder="E.g. White House, Washington" name="address" required>
+            <label for="DateOfBirth"><b>Date Of Birth</b></label>
+            <input type="text" id="dateOfBirth" placeholder="E.g. 1958-03-27" name="dateOfBirth" required>
+            <button type="submit" class="btn" onclick="create()">Add User</button>
+            <button type="submit" class="btn" onclick="update()">Edit User</button>
+        </form>
+        <div class="dropdown">
+            <button class="dropbtn">Other Options</button>
+            <div class="dropdown-content">
+              <a href="#">View All Users</a>
+              <a href="#">Delete Users</a>
+            </div>
+          </div>
+
