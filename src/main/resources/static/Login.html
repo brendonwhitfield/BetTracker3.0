@@ -6,40 +6,62 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bet Tracker</title>
     <link rel="stylesheet" href="login.css">
+    <script src="login.js"></script>
 </head>
 <body>
     <header>
         <h1 class="logo" >YBT</h1>
         <nav>
             <ul class="nav__links">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">My Bets</a></li>
+                <li><a href="Home.html">Home</a></li>
+                <li><a href="MyBets.html">My Bets</a></li>
             </ul>
         </nav>
         <a class="Users" href="#"><button>Login</button></a>
     </header>
     <main>
-        <div id="addBetForm" class="form">
+        <div id="addUserForm" class="form">
         <form  class="form-container">
-            <h2>Please Create & Edit Users Below:</h2>
-            <label for="FirstName"><b>First Name</b></label>
-            <input type="text" id="firstName" placeholder="E.g. John" name="firstName" required>
-            <label for="LastName"><b>Last Name</b></label>
-            <input type="text" id="lastName" placeholder="E.g. Williams" name="lastName" required>
+            <h2>Please Add a User Below:</h2>
+            <label for="Name"><b>Name</b></label>
+            <input type="text" id="name" placeholder="E.g. John Williams" name="Name" required>
             <label for="Email"><b>Email</b></label>
             <input type="text" id="email" placeholder="E.g. johnW@yahoo.com" name="email" required>
-            <label for="Address"><b>Address</b></label>
-            <input type="text" id="address" placeholder="E.g. White House, Washington" name="address" required>
-            <label for="DateOfBirth"><b>Date Of Birth</b></label>
-            <input type="text" id="dateOfBirth" placeholder="E.g. 1958-03-27" name="dateOfBirth" required>
-            <button type="submit" class="btn" onclick="create()">Add User</button>
-            <button type="submit" class="btn" onclick="update()">Edit User</button>
+            <label for="Age"><b>Age</b></label>
+            <input type="text" id="age" placeholder="E.g. 1958-03-27" name="Age" required>
+            <button type="submit" class="btn" onclick="createUser()">Add User</button>
         </form>
-        <div class="dropdown">
-            <button class="dropbtn">Other Options</button>
-            <div class="dropdown-content">
-              <a href="#">View All Users</a>
-              <a href="#">Delete Users</a>
-            </div>
-          </div>
+        </div>
+        <div id="deleteUserForm" class="form">
+            <form  class="form-container">
+                <h2>Delete a user:</h2>
+                <label for="deleteUserId"><b>Enter User ID</b></label>
+                <input type="text" id="deleteUserId" placeholder="E.g. 32" name="deleteUserId" required>
+                <button type="submit" class="btn" onclick="deleteUser()">Delete User</button>
+            </form>
+        </div>
+        <div id="updateUserForm" class="form">
+            <form  class="form-container">
+                <h2>Please edit an existing user below:</h2>
+                <label for="Name"><b>Name</b></label>
+            <label for="ID"><b>User ID</b></label>
+            <input type="text" id="userID" placeholder="E.g. 23" name="betID" required>
+            <input type="text" id="Name2" placeholder="E.g. John Williams" name="Name" required>
+            <label for="Email"><b>Email</b></label>
+            <input type="text" id="email2" placeholder="E.g. johnW@yahoo.com" name="email" required>
+            <label for="Age"><b>Age</b></label>
+            <input type="text" id="age2" placeholder="E.g. 1958-03-27" name="Age" required>
+            <button type="submit" class="btn" onclick="updateUser()">Edit User</button>
+            </form>
+         </div>
+        </main>
+        <h2>       
+            <button type="button" class="btn" onclick="readALLUsers()">View Users</button>
+              </h2>    
+        <div id = "array-background">
+            <p></p>
+        </div>
+    </body>
+    
+    </html>
 
