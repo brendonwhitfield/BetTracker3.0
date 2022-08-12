@@ -5,11 +5,10 @@ import java.net.URISyntaxException;
 import java.util.Collection;
 import java.util.Optional;
 
-import javax.validation.Valid;
+import javax.websocket.server.PathParam;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -46,20 +45,20 @@ public class BetTypeController {
 	}
 
 	@PostMapping("/create")
-	ResponseEntity<BetType> createBetType(@Valid @RequestBody BetType betType) throws URISyntaxException {
+	ResponseEntity<BetType> createBetType(@RequestBody BetType betType) throws URISyntaxException {
 		BetType result = betTypeRepository.save(betType);
 		return ResponseEntity.created(new URI("/BetType/betType" + result.getId())).body(result);
 
 	}
 
-	@PutMapping("/update/{id}")
-	ResponseEntity<BetType> updateBetType(@Valid @RequestBody BetType betType) {
+	@PutMapping("/update")
+	ResponseEntity<BetType> updateBetType(@PathParam("id") @RequestBody BetType betType) {
 		BetType result = betTypeRepository.save(betType);
 		return ResponseEntity.ok().body(result);
 	}
 
-	@DeleteMapping("/delete/{id}")
-	ResponseEntity<?> deleteBetType(@PathVariable Long id) {
+	@PutMapping("/deleteBetType")
+	ResponseEntity<?> deleteBetType(@PathParam("id") @PathVariable Long id) {
 		betTypeRepository.deleteById(id);
 		return ResponseEntity.ok().build();
 	}

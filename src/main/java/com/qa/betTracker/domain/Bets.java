@@ -1,8 +1,5 @@
 package com.qa.betTracker.domain;
 
-import java.math.BigDecimal;
-import java.time.Instant;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -10,6 +7,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -33,21 +32,14 @@ public class Bets {
 	@Column(nullable = false, name = "outcome")
 	private String outcome;
 
-	@Column(nullable = false, name = "stake")
-	private BigDecimal stake;
-
-	@Column(nullable = false, name = "odds")
-	private BigDecimal odds;
-
 	@Column(nullable = false, name = "profitLoss")
-	private BigDecimal profitLoss;
+	private double profitLoss;
 
-	@Column(nullable = false, name = "betDate")
-	private Instant betDate;
-
+	@JsonIgnore
 	@ManyToOne
 	private BetType betType;
 
+	@JsonIgnore
 	@ManyToOne
 	private User users;
 
