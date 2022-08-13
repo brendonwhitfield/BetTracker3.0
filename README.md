@@ -1,5 +1,5 @@
 # Bet-tracker-full-stack
-Bet tracker project with full front-end and back-end CRUD functionality. \n
+Bet tracker project with full front-end and back-end CRUD functionality. <br/>
 -- This project will allow a user to add and track bets with the otpion to edit and delete them too-- \n
 https://brendonwhitfield.atlassian.net/jira/software/projects/BTP/boards/4/backlog
 
