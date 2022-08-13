@@ -1,19 +1,19 @@
 # Bet-tracker-full-stack
 Bet tracker project with full front-end and back-end CRUD functionality. <br/>
--- This project will allow a user to add and track bets with the otpion to edit and delete them too-- <br/>
+-- This project will allow a user to add and track bets with the option to edit and delete them too-- <br/>
 https://brendonwhitfield.atlassian.net/jira/software/projects/BTP/boards/4/backlog
 
 ##  Getting started
 
-The first thing you will need to do is ensure your system has the latest versions of the below (as of 12/08/22)
-ide - https://www.eclipse.org/downloads/ <br/>
-java - https://www.oracle.com/java/technologies/downloads/#java17 <br/>
+The first thing you will need to do is ensure your system has the latest versions of the below (as of 12/08/22) <br/>
+Ide - https://www.eclipse.org/downloads/ <br/>
+Java - https://www.oracle.com/java/technologies/downloads/#java17 <br/>
 Maven - https://maven.apache.org/download.cgi <br/>
 MySQL - https://downloads.mysql.com/archives/installer/ <br/>
 
-next, you will need to clone this repository from above to your local system and pull the project to your local device. <br/>
-open the ide and run the project as a springboot project. <br/>
-To check it is functional, open "localhost:8090/Home.html" on you web browser.
+*Next, you will need to clone this repository from above to your local system and pull the project to your local device. <br/>
+*Open the ide and run the project as a springboot project. <br/>
+*To check it is functional, open "localhost:8090/Home.html" on you web browser.
 
 ## Testing
 
