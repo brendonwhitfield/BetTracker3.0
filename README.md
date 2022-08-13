@@ -11,9 +11,9 @@ Java - https://www.oracle.com/java/technologies/downloads/#java17 <br/>
 Maven - https://maven.apache.org/download.cgi <br/>
 MySQL - https://downloads.mysql.com/archives/installer/ <br/>
 
-*Next, you will need to clone this repository from above to your local system and pull the project to your local device. <br/>
-*Open the ide and run the project as a springboot project. <br/>
-*To check it is functional, open "localhost:8090/Home.html" on you web browser.
+* Next, you will need to clone this repository from above to your local system and pull the project to your local device. <br/>
+* Open the ide and run the project as a springboot project. <br/>
+* To check it is functional, open "localhost:8090/Home.html" on you web browser.
 
 ## Testing
 
