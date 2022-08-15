@@ -50,7 +50,7 @@ public class UserServiceTest {
 	@Test
 	public void testUpdate() {
 		User user = new User(1L, "Brendon Whitfield", "me@email.com", 43);
-		User updateTest = new User(1L, "Brendon Whitfield", "me@email.com", 43);
+		User updateTest = new User(1L, "Brendon Whitfield", "me@email.com", 44);
 		Optional<User> optional = Optional.of(user);
 		Long id = 1L;
 		Mockito.when(userRepository.findById(id)).thenReturn(optional);
