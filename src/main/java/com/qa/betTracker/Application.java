@@ -8,6 +8,7 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 @SpringBootApplication
 @ComponentScan(value = "com.qa.betTracker.controller")
+@ComponentScan(value = "com.qa.betTracker.service")
 @EnableJpaRepositories("com.qa.betTracker.repository")
 @EntityScan("com.qa.betTracker.domain")
 

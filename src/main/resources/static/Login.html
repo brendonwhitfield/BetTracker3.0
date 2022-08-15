@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bet Tracker</title>
+    <link rel="stylesheet" href="login.css">
+    <script src="login.js"></script>
+</head>
+<body>
+    <header>
+        <h1 class="logo" >YBT</h1>
+        <nav>
+            <ul class="nav__links">
+                <li><a href="Home.html">Home</a></li>
+                <li><a href="MyBets.html">My Bets</a></li>
+            </ul>
+        </nav>
+        <a class="Users" href="#"><button>Login</button></a>
+    </header>
+    <main>
+        <div id="addUserForm" class="form">
+        <form  class="form-container">
+            <h2>Please Add a User Below:</h2>
+            <label for="Name"><b>Name</b></label>
+            <input type="text" id="name" placeholder="E.g. John Williams" name="Name" required>
+            <label for="Email"><b>Email</b></label>
+            <input type="text" id="email" placeholder="E.g. johnW@yahoo.com" name="email" required>
+            <label for="Age"><b>Age</b></label>
+            <input type="text" id="age" placeholder="E.g. 1958-03-27" name="Age" required>
+            <button type="submit" class="btn" onclick="createUser()">Add User</button>
+        </form>
+        </div>
+        <div id="deleteUserForm" class="form">
+            <form  class="form-container">
+                <h2>Delete a user:</h2>
+                <label for="deleteUserId"><b>Enter User ID</b></label>
+                <input type="text" id="deleteUserId" placeholder="E.g. 32" name="deleteUserId" required>
+                <button type="submit" class="btn" onclick="deleteUser()">Delete User</button>
+            </form>
+        </div>
+        <div id="updateUserForm" class="form">
+            <form  class="form-container">
+                <h2>Please edit an existing user below:</h2>
+                <label for="Name"><b>Name</b></label>
+            <label for="ID"><b>User ID</b></label>
+            <input type="text" id="userID" placeholder="E.g. 23" name="betID" required>
+            <input type="text" id="name2" placeholder="E.g. John Williams" name="Name" required>
+            <label for="Email"><b>Email</b></label>
+            <input type="text" id="email2" placeholder="E.g. johnW@yahoo.com" name="email" required>
+            <label for="Age"><b>Age</b></label>
+            <input type="text" id="age2" placeholder="E.g. 1958-03-27" name="Age" required>
+            <button type="button" class="btn" onclick="updateUser()">Edit User</button>
+            </form>
+         </div>
+        </main>
+        <h2>       
+            <button type="submit" class="btn" onclick="readALLUsers()">View Users</button>
+              </h2>    
+        <div id = "array-background">
+            <p></p>
+        </div>
+    </body>
+    
+    </html>
+
