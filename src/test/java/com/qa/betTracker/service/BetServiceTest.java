@@ -31,7 +31,7 @@ public class BetServiceTest {
 	@Test
 	public void testCreate() {
 
-		Bets bets = new Bets(1L, "Brendon Whitfield", "me@email.com", 43);
+		Bets bets = new Bets(1L, "Acca", "Win", 43);
 		Mockito.when(this.betRepository.save(bets)).thenReturn(bets);
 		assertEquals(this.betService.createBets2(bets), bets);
 		Mockito.verify(this.betRepository, Mockito.times(1)).save(bets);
@@ -49,8 +49,8 @@ public class BetServiceTest {
 
 	@Test
 	public void testUpdate() {
-		Bets bets = new Bets(1L, "Brendon Whitfield", "me@email.com", 43);
-		Bets updateTest = new Bets(1L, "Brendon Whitfield", "me@email.com", 43);
+		Bets bets = new Bets(1L, "Acca", "Win", 43);
+		Bets updateTest = new Bets(1L, "Acca", "win", 44);
 		Optional<Bets> optional = Optional.of(bets);
 		Long id = 1L;
 		Mockito.when(betRepository.findById(id)).thenReturn(optional);
@@ -62,7 +62,7 @@ public class BetServiceTest {
 
 	@Test
 	public void testGetAll() {
-		Bets bets = new Bets(1L, "Brendon Whitfield", "me@email.com", 43);
+		Bets bets = new Bets(1L, "Acca", "Win", 43);
 		List<Bets> list = new ArrayList<Bets>();
 		list.add(bets);
 
