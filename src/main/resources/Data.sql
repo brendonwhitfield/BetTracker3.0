@@ -1,6 +1,3 @@
-INSERT INTO BET_TYPE (Id, Sport) VALUES (1, 'Football');
-INSERT INTO BET_TYPE (Id, Sport) VALUES (2, 'Horse Racing');
-INSERT INTO BET_TYPE (Id, Sport) VALUES (3, 'Football');
 
 INSERT INTO Users (Id, Name, Email, Age) VALUES (1, 'Brendon Whitfield', 'brendonwhitfield@email.com', 22);
 INSERT INTO Users (Id, Name, Email, Age) VALUES (2, 'Ben Whitfield', 'benwhitfield@email.com', 61);

@@ -57,7 +57,7 @@ function updateUser(){
     let id = document.getElementById("userID").value;
     let name = document.getElementById("name2").value;
     let email = document.getElementById("email2").value;
-    let age = document.getElementById("age").value;
+    let age = document.getElementById("age2").value;
    
     
   

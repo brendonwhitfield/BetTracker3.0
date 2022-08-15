@@ -32,8 +32,4 @@ public class User {
 	@Column(nullable = false, name = "age")
 	private long age;
 
-	/*
-	 * @OneToMany private Set<BetType> betType;
-	 */
-
 }
