@@ -1,17 +1,12 @@
 package com.qa.betTracker.controller;
 
-import java.net.URI;
-import java.net.URISyntaxException;
 import java.util.Collection;
-import java.util.Optional;
 
 import javax.validation.Valid;
+import javax.websocket.server.PathParam;
 
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -19,46 +14,40 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.qa.betTracker.domain.User;
-import com.qa.betTracker.repository.UserRepository;
+import com.qa.betTracker.service.UserService;
 
+@Service
 @RestController
 @RequestMapping("/Users")
 public class UserController {
 
-	private UserRepository userRepository;
+	private UserService userService;
 
-	public UserController(UserRepository userRepository) {
+	public UserController(UserService userService) {
 		super();
-		this.userRepository = userRepository;
+		this.userService = userService;
+
 	}
 
 	@GetMapping("/getAll")
 	Collection<User> getAll() {
-		return userRepository.findAll();
+		return this.userService.getAllUsers();
 	}
 
-	@GetMapping("/getUsers/{id}")
-	ResponseEntity<?> getUser(@PathVariable Long id) {
-		Optional<User> user = userRepository.findById(id);
-		return user.map(response -> ResponseEntity.ok().body(response))
-				.orElse(new ResponseEntity<>(HttpStatus.NOT_FOUND));
+	@PutMapping("/deleteUser")
+	boolean deleteUser(@PathParam("id") long id) {
+		this.userService.deleteUser2(id);
+		return false;
 	}
 
-	@DeleteMapping("/delete/{id}")
-	ResponseEntity<?> deleteBets(@PathVariable Long id) {
-		userRepository.deleteById(id);
-		return ResponseEntity.ok().build();
+	@PostMapping("/createUser")
+	User createUser(@Valid @RequestBody User user) {
+		return this.userService.createUser2(user);
 	}
 
-	@PostMapping("/create")
-	ResponseEntity<User> createUser(@Valid @RequestBody User user) throws URISyntaxException {
-		User result = userRepository.save(user);
-		return ResponseEntity.created(new URI("/Users/users" + result.getId())).body(result);
+	@PutMapping("/updateUsers")
+	User updateUser(@PathParam("id") long id, @RequestBody User user) {
+		return this.userService.UpdateUser2(id, user);
 	}
 
-	@PutMapping("/update/{id}")
-	ResponseEntity<User> updateUser(@Valid @RequestBody User user) {
-		User result = userRepository.save(user);
-		return ResponseEntity.ok().body(result);
-	}
 }
